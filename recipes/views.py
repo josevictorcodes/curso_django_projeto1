@@ -1,4 +1,4 @@
-#from django.shortcuts import render
+from django.shortcuts import render
 #from django.urls import path
 from django.http import HttpResponse
 
@@ -6,10 +6,11 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse('HOME')
+    """Receives a request and return a html file inside the templates folder"""
+    return render(request, 'recipes/home.html')
 
 def contato(request):
-    return HttpResponse('CONTATO')
+    return render(request, 'recipes/contato.html')
 
 def sobre(request):
-    return HttpResponse('SOBRE')
+    return render(request, 'recipes/sobre.html')
